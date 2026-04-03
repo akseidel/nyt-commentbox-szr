@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Comment Box Expander</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      width: 280px;
+      background: #fff;
+      color: #0741be;
+    }
+
+    header {
+      background: #0741be;
+      color: #fff;
+      padding: 14px 16px 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    header .logo {
+      font-family: "Times New Roman", Times, serif;
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -1px;
+      line-height: 1;
+    }
+
+    header h1 {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      opacity: 0.85;
+      line-height: 1.2;
+    }
+
+    .body {
+      padding: 18px 16px 20px;
+    }
+
+    p.desc {
+      font-size: 12.5px;
+      color: #555;
+      line-height: 1.55;
+      margin-bottom: 16px;
+    }
+
+    .btn-primary {
+      display: block;
+      width: 100%;
+      padding: 11px 14px;
+      background: #0741be;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: background 0.15s;
+    }
+    .btn-primary:hover  { background: #02a00a; }
+    .btn-primary:active { background: #4fae54; }
+
+
+    #status {
+      margin-top: 12px;
+      font-size: 12px;
+      min-height: 18px;
+      color: #2a255b;
+      text-align: center;
+      transition: color 0.2s;
+    }
+    #status.error   { color: #c00; }
+    #status.success { color: #007a00; }
+
+    .height-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+    .height-row label {
+      font-size: 12px;
+      color: #444;
+      white-space: nowrap;
+    }
+    .height-row input[type="range"] {
+      flex: 1;
+      accent-color: #052c81;
+    }
+    .height-row .val {
+      font-size: 12px;
+      font-weight: 700;
+      min-width: 42px;
+      text-align: right;
+    }
+
+    footer {
+      padding: 10px 16px 14px;
+      border-top: 1px solid #eee;
+      font-size: 11px;
+      color: #aaa;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <span class="logo">NYT</span>
+  <h1>Comment Box<br>Expander</h1>
+</header>
+
+<div class="body">
+  <p class="desc">
+    Opens the comment box on the current NYT article and expands it to a
+    comfortable writing height.
+  </p>
+
+<div class="height-row" style="color: #0741be;">
+  <label for="heightSlider">Height</label>
+  <input type="range" id="heightSlider" min="200" max="400" step="20" value="400" style="accent-color: #0741be;" />
+  <span class="val" id="heightVal">400 px</span>
+</div>
+
+  <button class="btn-primary" id="expandBtn">Open/Expand Comment Box</button>
+  <div id="status"></div>
+</div>
+
+<footer>Active on nytimes.com only</footer>
+
+<script src="popup.js"></script>
+</body>
+</html>

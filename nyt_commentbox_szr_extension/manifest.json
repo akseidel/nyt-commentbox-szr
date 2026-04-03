@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Comment Box Expander",
+  "version": "1.1",
+  "description": "Opens and expands the NYT comment entry box to a comfortable writing height.",
+  "permissions": ["scripting", "activeTab", "storage"],
+  "host_permissions": ["*://*.nytimes.com/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    },
+    "default_title": "Comment Box Expander"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.nytimes.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
