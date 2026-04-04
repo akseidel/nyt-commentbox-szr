@@ -8,11 +8,10 @@
 ### In Use
 
 * Starting with the comments section open ***and being logged in to your NYT account.***
+* Click the **nyt_commentbox_szr** extension icon shown here.
 
 !['ExtensionIcon'](doc-images/vivaldi_extension_icon.png)
 
-* Clicking the **nyt_commentbox_szr** extension icon shown in the above image results in:
-  
 !['ExtensionIcon'](doc-images/vivaldi_after_running.png)
 
 * At which point clicking anywhere not in the **NYT COMMENT BOX EXPANDER** dismisses the extension.
