@@ -5,7 +5,7 @@
 * A Chrome browser extension that opens and automatically expands the New York Times new comments entry box to a convenient size. This extension should work in any browser that supports Chrome browser extensions.
 * Apple's Safari and possibly other browsers do not support Chrome browser extensions.
 
-### For Example
+### In Use
 
 * Starting with the comments section open ***and being logged in to your NYT account.***
 
