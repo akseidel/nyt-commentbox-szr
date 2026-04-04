@@ -4,7 +4,7 @@
 
 A browser extension that opens and automatically expands the New York Times new comments entry box to a convenient size.
 
-### For Example:
+### For Example
 
 * Starting with the comments section open ***and being logged in to your NYT account.***
 
@@ -25,4 +25,20 @@ A browser extension that opens and automatically expands the New York Times new 
 
 #### Something To Know
 
-* This extension operates on the mechanism the NYT provides for entering new comments. That mechanism can only be loaded when you are logged into a NYT account and have clicked onto "Share your thoughts...", which you only see presented when the comments section is showing. This is why this extension works only when the comments section is showing and you are logged in. Otherwise, the extension reports it cannot find on what it needs to operate. 
+* This extension operates on the mechanism the NYT provides for entering new comments. That mechanism can only be loaded when you are logged into a NYT account and have clicked onto "Share your thoughts...", which you only see presented when the comments section is showing. This is why this extension works only when the comments section is showing and you are logged in. Otherwise, the extension reports it cannot find on what it needs to operate.
+
+### Installation
+
+* Web browser extensions consist of some files  in a folder that you inform your web browser is an extension.
+* To install you will be downloading a zip file, "nyt_commentbox_szr_extension.zip", that when unzipped results in a folder named "nyt_commentbox_szr_extension".
+* Find your way to your web browser's Manage Extensions. Often this is accomplished by right clicking on an extension icon already showing in the web browser upper tool bar at the upper right corner.
+* Once at Manage Extensions, select "Load unpacked". Then select the folder named "nyt_commentbox_szr_extension". The extension will be loaded. Depending on what web browser you have, the extension's icon might already be pinned in the tool bar.
+
+#### If Using the Chrome Web Browser
+
+* The Chrome web browser might not pin the new loaded extension icon in the tool. You might see something like this:
+  !['Chrome Extension Icon Not Pinned'](doc-images/chrome_icon_not_pinned_yet.png)
+* If that is the case, then first right click on the upper icon and then pick the pin icon for the extension like what is shown here:
+  !['Chrome To Pin Icon'](doc-images/chrome_to_pin_icon.png)
+* The extension's icon should now be visible at the toolbar.
+!['Chrome Icon Pinned'](doc-images/chrome_icon_pinned.png)
