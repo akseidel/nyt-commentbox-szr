@@ -15,6 +15,7 @@
 !['ExtensionIcon'](doc-images/vivaldi_after_running.png)
 
 * At which point clicking anywhere not in the **NYT COMMENT BOX EXPANDER** dismisses the extension.
+* If you are replying to an existing comment instead of creating a new comment, then first initiate the reply before activating the extension. The extension will then operate on the already open comment box.
 
 ### More Information
 
