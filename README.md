@@ -2,7 +2,8 @@
 
 # nyt-commentbox-szr
 
-A browser extension that opens and automatically expands the New York Times new comments entry box to a convenient size.
+* A Chrome browser extension that opens and automatically expands the New York Times new comments entry box to a convenient size. This extension should work in any browser that supports Chrome browser extensions.
+* Apple's Safari and possibly other browsers do not support Chrome browser extensions.
 
 ### For Example
 
