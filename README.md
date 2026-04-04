@@ -30,7 +30,7 @@
 
 ### Installation
 
-* Web browser extensions consist of some files  in a folder that you inform your web browser is an extension.
+* Chrome type web browser extensions consist of some files  in a folder that you inform your web browser is an extension.
 * To install you will be downloading a zip file, "nyt_commentbox_szr_extension.zip". Find "Releases" on this webpage at the right hand side to navigate where you can download the zip file.
 * The zip file when unzipped results in a folder named "nyt_commentbox_szr_extension".
 * Find your way to your web browser's Manage Extensions. Often this is accomplished by right clicking on an extension icon already showing the upper right corner.
