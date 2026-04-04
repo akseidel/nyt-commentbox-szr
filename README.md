@@ -38,7 +38,7 @@
 
 #### If Using the Chrome Web Browser
 
-* The Chrome web browser might not pin the new loaded extension icon in the tool. You might see this:
+* The Chrome web browser might not pin the new loaded extension icon in the tool. (The Vivaldi browser currently does automatically pin extensions. The first images in this readme are Vivaldi, which why they look different than the following images from Chrome.) You might see this in Chrome:
   !['Chrome Extension Icon Not Pinned'](doc-images/chrome_icon_not_pinned_yet.png)
 * If that is the case, then first right click on the upper icon to reveal a popup. On that popup pick the pin icon for the Comment Box Expander.
   !['Chrome To Pin Icon'](doc-images/chrome_to_pin_icon.png)
