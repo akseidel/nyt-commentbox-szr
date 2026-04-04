@@ -25,7 +25,7 @@ A browser extension that opens and automatically expands the New York Times new 
 
 #### Something To Know
 
-* This extension operates on the mechanism the NYT provides for entering new comments. That mechanism can only be loaded when you are logged into a NYT account and have clicked onto "Share your thoughts...", which you only see presented when the comments section is showing. This is why this extension works only when the comments section is showing and you are logged in. Otherwise, the extension reports it cannot find on what it needs to operate.
+* This extension operates on the mechanism the NYT provides for entering new comments. That mechanism can only be loaded when you are logged into a NYT account and have clicked onto "Share your thoughts...", which you only see presented when the comments section is showing. This is why this extension works only when the comments section is showing and you are logged in. Otherwise, the extension reports it cannot find what it needs.
 
 ### Installation
 
