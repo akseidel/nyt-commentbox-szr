@@ -30,15 +30,16 @@ A browser extension that opens and automatically expands the New York Times new 
 ### Installation
 
 * Web browser extensions consist of some files  in a folder that you inform your web browser is an extension.
-* To install you will be downloading a zip file, "nyt_commentbox_szr_extension.zip", that when unzipped results in a folder named "nyt_commentbox_szr_extension".
-* Find your way to your web browser's Manage Extensions. Often this is accomplished by right clicking on an extension icon already showing in the web browser upper tool bar at the upper right corner.
+* To install you will be downloading a zip file, "nyt_commentbox_szr_extension.zip". Find "Releases" on this webpage at the right hand side to navigate where you can download the zip file.
+* The zip file when unzipped results in a folder named "nyt_commentbox_szr_extension".
+* Find your way to your web browser's Manage Extensions. Often this is accomplished by right clicking on an extension icon already showing the upper right corner.
 * Once at Manage Extensions, select "Load unpacked". Then select the folder named "nyt_commentbox_szr_extension". The extension will be loaded. Depending on what web browser you have, the extension's icon might already be pinned in the tool bar.
 
 #### If Using the Chrome Web Browser
 
-* The Chrome web browser might not pin the new loaded extension icon in the tool. You might see something like this:
+* The Chrome web browser might not pin the new loaded extension icon in the tool. You might see this:
   !['Chrome Extension Icon Not Pinned'](doc-images/chrome_icon_not_pinned_yet.png)
-* If that is the case, then first right click on the upper icon and then pick the pin icon for the extension like what is shown here:
+* If that is the case, then first right click on the upper icon to reveal a popup. On that popup pick the pin icon for the Comment Box Expander.
   !['Chrome To Pin Icon'](doc-images/chrome_to_pin_icon.png)
 * The extension's icon should now be visible at the toolbar.
 !['Chrome Icon Pinned'](doc-images/chrome_icon_pinned.png)
