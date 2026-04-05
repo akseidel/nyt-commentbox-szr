@@ -46,7 +46,7 @@ function findPlaceholder() {
 }
 
 /* ------------------------------------------------------------------ */
-/* Height enforcement                                                   */
+/* Height enforcement                                                 */
 /* ------------------------------------------------------------------ */
 
 function applyHeight(el, px) {
@@ -111,7 +111,7 @@ function triggerReactClick(el) {
 }
 
 /* ------------------------------------------------------------------ */
-/* Simulate a click via multiple strategies, most-reliable first       */
+/* Simulate a click via multiple strategies, most-reliable first      */
 /* ------------------------------------------------------------------ */
 
 function simulateClick(el) {
@@ -145,7 +145,7 @@ function simulateClick(el) {
 }
 
 /* ------------------------------------------------------------------ */
-/* Main                                                                 */
+/* Main                                                               */
 /* ------------------------------------------------------------------ */
 
 function expandCommentBox(px, sendResponse) {
@@ -165,7 +165,7 @@ function expandCommentBox(px, sendResponse) {
   if (!placeholder) {
     sendResponse({
       success: false,
-      error: 'Comments section not found. Scroll down to it and try again.'
+      error: 'Open the Comments section first. Commenting requires being logged to a NYT account. Ensure both. Try again.'
     });
     return;
   }
@@ -190,14 +190,14 @@ function expandCommentBox(px, sendResponse) {
       clearInterval(timer);
       sendResponse({
         success: false,
-        error: 'Clicked the comments area but the input did not appear. Try again.'
+        error: 'Commenting requires being logged to a NYT account. Log in and try again.'
       });
     }
   }, 100);
 }
 
 /* ------------------------------------------------------------------ */
-/* Message listener                                                     */
+/* Message listener                                                   */
 /* ------------------------------------------------------------------ */
 
 chrome.runtime.onMessage.addListener((msg, _sender, sendResponse) => {
