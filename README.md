@@ -34,7 +34,7 @@
 * To install you will be downloading a zip file, "nyt_commentbox_szr_extension.zip". Find "Releases" on this webpage at the right hand side to navigate where you can download the zip file.
 * The zip file when unzipped results in a folder named "nyt_commentbox_szr_extension".
 * Find your way to your web browser's Manage Extensions. Often this is accomplished by right clicking on an extension icon already showing the upper right corner.
-* Once at Manage Extensions, select "Load unpacked". Then select the folder named "nyt_commentbox_szr_extension". The extension will be loaded. Depending on what web browser you have, the extension's icon might already be pinned in the tool bar.
+* Once at Manage Extensions, on the right hand side is a toggle switch "Developer mode". Make sure that switch is on. Then select "Load unpacked". ("Load unpacked") is only visible when the "Developer mode" switch is set to on. Then select the folder named "nyt_commentbox_szr_extension". The extension will be loaded. Depending on what web browser you have, the extension's icon might already be pinned in the tool bar.
 
 #### If Using the Chrome Web Browser
 
