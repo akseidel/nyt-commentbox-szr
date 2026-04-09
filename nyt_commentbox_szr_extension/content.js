@@ -1,5 +1,5 @@
 /**
- * NYT New Comment Expander — content script (top frame only)
+ * NYT Comment Expander — content script (top frame only)
  *
  * The comment input is a <textarea> inside #commentsContainer.
  * Before the user clicks into it, only a placeholder element exists.
@@ -46,7 +46,7 @@ function findPlaceholder() {
 }
 
 /* ------------------------------------------------------------------ */
-/* Height enforcement                                                 */
+/* Height enforcement                                                   */
 /* ------------------------------------------------------------------ */
 
 function applyHeight(el, px) {
@@ -111,7 +111,7 @@ function triggerReactClick(el) {
 }
 
 /* ------------------------------------------------------------------ */
-/* Simulate a click via multiple strategies, most-reliable first      */
+/* Simulate a click via multiple strategies, most-reliable first       */
 /* ------------------------------------------------------------------ */
 
 function simulateClick(el) {
@@ -145,7 +145,36 @@ function simulateClick(el) {
 }
 
 /* ------------------------------------------------------------------ */
-/* Main                                                               */
+/* Uncheck the email-notification checkbox                             */
+/* id="notifyOnApproval", checked by default, lives outside           */
+/* #commentsContainer — poll briefly since it appears after textarea  */
+/* ------------------------------------------------------------------ */
+
+function uncheckEmailNotification() {
+  let tries = 0;
+  const timer = setInterval(() => {
+    tries++;
+    const cb = document.getElementById('notifyOnApproval');
+    if (cb) {
+      clearInterval(timer);
+
+      // Wait 100 ms for React to finish its initial render of the
+      // checkbox, then fire a single native click to uncheck it.
+      setTimeout(() => {
+        if (!cb.checked) return;
+        cb.click();
+      }, 100);
+
+    } else if (tries >= 20) {
+      clearInterval(timer);
+    }
+  }, 100);
+}
+
+
+
+/* ------------------------------------------------------------------ */
+/* Main                                                                 */
 /* ------------------------------------------------------------------ */
 
 function expandCommentBox(px, sendResponse) {
@@ -156,6 +185,7 @@ function expandCommentBox(px, sendResponse) {
     applyHeight(existing, px);
     watchHeight(existing, px);
     existing.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    uncheckEmailNotification();
     sendResponse({ success: true });
     return;
   }
@@ -185,6 +215,7 @@ function expandCommentBox(px, sendResponse) {
       applyHeight(ta, px);
       watchHeight(ta, px);
       ta.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      uncheckEmailNotification();
       sendResponse({ success: true });
     } else if (tries >= 30) {
       clearInterval(timer);
@@ -197,7 +228,7 @@ function expandCommentBox(px, sendResponse) {
 }
 
 /* ------------------------------------------------------------------ */
-/* Message listener                                                   */
+/* Message listener                                                     */
 /* ------------------------------------------------------------------ */
 
 chrome.runtime.onMessage.addListener((msg, _sender, sendResponse) => {

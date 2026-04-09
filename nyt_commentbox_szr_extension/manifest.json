@@ -1,18 +1,19 @@
 {
   "manifest_version": 3,
-  "name": "Comment Box Expander",
-  "version": "1.1",
-  "description": "Opens and expands the NYT comment entry box to a comfortable writing height.",
+  "name": "NYT Comment Box Expander",
+  "version": "1.11",
+  "description": "Opens and expands the NYT comment entry box to a comfortable writing height and unchecks the email checkbox.",
   "permissions": ["scripting", "activeTab", "storage"],
   "host_permissions": ["*://*.nytimes.com/*"],
   "action": {
+    "default_area": "navbar",
     "default_popup": "popup.html",
     "default_icon": {
       "16": "icon16.png",
       "48": "icon48.png",
       "128": "icon128.png"
     },
-    "default_title": "Comment Box Expander"
+    "default_title": "NYT Comment Box Expander"
   },
   "content_scripts": [
     {

@@ -44,7 +44,7 @@ async function run(height) {
     }
     if (response && response.success) {
       statusElem.className = 'success';
-      statusElem.textContent = '✓ Comment box expanded!';
+      statusElem.textContent = '✓ Comment box expanded';
     } else {
       statusElem.className = 'error';
       statusElem.textContent = (response && response.error) || '⚠ Could not find the comment box.';
