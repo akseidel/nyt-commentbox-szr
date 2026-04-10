@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script> const VERSION = 'v1.11'; </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Comment Box Expander</title>
+  <title>NYT Comment Box Expander</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -94,7 +95,7 @@
     }
     .height-row input[type="range"] {
       flex: 1;
-      accent-color: #052c81;
+      accent-color: #0741be;
     }
     .height-row .val {
       font-size: 12px;
@@ -122,21 +123,35 @@
 <div class="body">
   <p class="desc">
     Opens the comment box on the current NYT article and expands it to a
-    comfortable writing height.
+    comfortable writing height. Then also unchecks the email checkbox.
   </p>
 
 <div class="height-row" style="color: #0741be;">
-  <label for="heightSlider">Height</label>
-  <input type="range" id="heightSlider" min="200" max="400" step="20" value="400" style="accent-color: #0741be;" />
-  <span class="val" id="heightVal">400 px</span>
+  <label for="heightSlider">
+    Height
+  </label>
+  <input 
+    type="range" 
+    id="heightSlider" 
+    min="200" 
+    max="400" 
+    step="20" 
+    value="400"
+  />
+  <span class="val" id="heightVal">
+    400 px
+  </span>
 </div>
 
   <button class="btn-primary" id="expandBtn">Open / Expand Comment Box</button>
   <div id="status"></div>
 </div>
 
-<footer>(v1.11) Active on nytimes.com only</footer>
+<footer id="footer">Active on nytimes.com only</footer>
 
+<script>
+  document.getElementById('footer').textContent = '(' + VERSION + ') Active on nytimes.com only';
+</script>
 <script src="popup.js"></script>
 </body>
 </html>
